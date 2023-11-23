@@ -290,7 +290,7 @@ func (c *Client) Generate(ctx context.Context, imageURL, textPrompt string, inte
 			},
 			Name:           fmt.Sprintf("Gen-2, %d", seed),
 			AssetGroupName: "Gen-2",
-			ExploreMode:    false,
+			ExploreMode:    true,
 		},
 		AsTeamID: c.teamID,
 	}
