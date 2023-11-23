@@ -243,7 +243,7 @@ type artifact struct {
 	ParentAssetGroupId string   `json:"parentAssetGroupId"`
 	Filename           string   `json:"filename"`
 	URL                string   `json:"url"`
-	FileSize           int      `json:"fileSize"`
+	FileSize           string      `json:"fileSize"`
 	IsDirectory        bool     `json:"isDirectory"`
 	PreviewURLs        []string `json:"previewUrls"`
 	Private            bool     `json:"private"`
