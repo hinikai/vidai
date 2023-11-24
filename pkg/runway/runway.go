@@ -206,6 +206,9 @@ type gen2Options struct {
 	ImagePrompt string `json:"image_prompt"`
 	InitImage   string `json:"init_image"`
 	Mode        string `json:"mode"`
+	UseMotionScore     bool   `json:"use_motion_score"`
+	UseMotionVectors   bool   `json:"use_motion_vectors"`
+	MotionScore        int    `json:"motion_score"`
 }
 
 type taskResponse struct {
@@ -280,6 +283,9 @@ func (c *Client) Generate(ctx context.Context, imageURL, textPrompt string, inte
 			Seconds: 4,
 			Gen2Options: gen2Options{
 				Interpolate: interpolate,
+        UseMotionScore: true,
+        MotionScore: 50,
+        UseMotionVectors: false,
 				Seed:        seed,
 				Upscale:     upscale,
 				TextPrompt:  textPrompt,
